@@ -14,8 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
 <body>
@@ -43,7 +46,8 @@
                 </div>
 
                 <div class="hero-actions reveal-up-delayed">
-                    <div class="testimonial-card">
+                    <!-- Desktop Testimonial (Hidden on Mobile) -->
+                    <div class="testimonial-card testimonial-desktop">
                         <div class="testimonial-header">
                             <img src="assets/testimonial-mark.jpg" alt="Mark B." class="testimonial-photo">
                             <div class="testimonial-user-info">
@@ -61,6 +65,28 @@
                     </div>
 
                     <a href="#shop" class="cta-button">Go To Official Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section (Mobile Only - Controlled in CSS) -->
+    <section class="social-proof testimonial-mobile">
+        <div class="container">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="assets/testimonial-mark.jpg" alt="Mark B." class="testimonial-photo">
+                    <div class="testimonial-user-info">
+                        <span class="testimonial-name">MARK B.</span>
+                        <span class="testimonial-location">NEW YORK, USA</span>
+                    </div>
+                </div>
+                <div class="testimonial-body">
+                    <p>"Before EndoPeak, I thought my top performance days were gone. As a retired officer, staying fit was crucial. But age caught up and ED struck. Thankfully, I found EndoPeak in the nick of time. Now, I feel like I'm back in my prime!"</p>
+                </div>
+                <div class="testimonial-footer">
+                    <span class="verified-label">VERIFIED PURCHASE</span>
+                    <div class="testimonial-stars">★★★★★</div>
                 </div>
             </div>
         </div>

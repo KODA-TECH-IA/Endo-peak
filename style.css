@@ -166,6 +166,7 @@ body {
 
 .hero-content {
     max-width: 650px;
+    margin-top: 80px; /* Lowered further as requested */
 }
 
 .eyebrow {
@@ -209,33 +210,49 @@ body {
 .hero-actions {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 20px;
 }
 
 /* Testimonial Card */
+/* Visibility Classes */
+.testimonial-mobile {
+    display: none; /* Hidden by default (Desktop) */
+}
+
+.testimonial-desktop {
+    display: block; /* Shown by default (Desktop) */
+}
+
 .testimonial-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    padding: 15px;
-    max-width: 420px;
+    padding: 12px;
+    max-width: 380px;
     text-align: left;
     margin-top: 5px;
+}
+
+.social-proof {
+    padding: 30px 0;
+    background-color: var(--bg-dark);
+    position: relative;
+    z-index: 10;
 }
 
 .testimonial-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 10px;
+    margin-bottom: 8px;
 }
 
 .testimonial-photo {
-    width: 40px;
-    height: 40px;
+    width: 32px; /* Smaller photo */
+    height: 32px;
     border-radius: 50%;
-    border: 2px solid var(--primary-orange);
+    border: 1.5px solid var(--primary-orange);
     object-fit: cover;
 }
 
@@ -246,24 +263,24 @@ body {
 
 .testimonial-name {
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem; /* Smaller font */
     color: var(--text-white);
     letter-spacing: 0.5px;
 }
 
 .testimonial-location {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: #888;
 }
 
 .testimonial-body {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .testimonial-body p {
     font-style: italic;
-    font-size: 0.88rem;
-    line-height: 1.4;
+    font-size: 0.82rem; /* Consistent with mobile */
+    line-height: 1.3;
     color: #ddd;
     position: relative;
     padding-left: 12px;
@@ -285,11 +302,11 @@ body {
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
 .verified-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 800;
     color: var(--text-white);
     letter-spacing: 0.5px;
@@ -297,7 +314,7 @@ body {
 
 .testimonial-stars {
     color: #FFC107;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .cta-button {
@@ -316,7 +333,7 @@ body {
     cursor: pointer;
     text-align: center;
     width: 100%; /* Take full available width */
-    max-width: 420px; /* Match the testimonial card exactly */
+    max-width: 380px; /* Match the shrunken testimonial card */
 }
 
 .cta-button:hover {
@@ -409,14 +426,33 @@ body {
     .hero {
         background-image: url('assets/hero-bg-mobile.png');
         background-position: center bottom;
-        background-size: cover;
+        background-size: cover; /* Back to cover for full screen, but fixed framing */
+        background-repeat: no-repeat;
+        background-color: #0b0500;
         text-align: center;
-        display: flex; /* Ensure flex is active */
-        flex-direction: column; /* Stack top to bottom */
-        justify-content: flex-start; /* Start at the top */
-        align-items: center; /* Center horizontally */
-        height: 100vh;
-        padding-top: 115px; /* Fine-tuned to balance space */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100dvh; /* Use dynamic viewport height */
+        padding-top: 135px; /* Lowered even more as requested */
+    }
+
+    /* Responsive Testimonial Visibility */
+    .testimonial-desktop {
+        display: none !important; /* Hide hero version on mobile */
+    }
+
+    .testimonial-mobile {
+        display: block !important; /* Show section version on mobile */
+    }
+
+    .social-proof {
+        padding: 50px 0;
+        background-color: var(--bg-dark);
+        position: relative;
+        z-index: 10;
+        margin-top: 0; /* REMOVED NEGATIVE MARGIN that was covering the product */
     }
     
     .hero::before {
@@ -451,15 +487,16 @@ body {
     }
     
     .headline {
-        font-size: clamp(1.9rem, 8.5vw, 2.6rem); /* Optimized size */
+        font-size: clamp(2.3rem, 10vw, 3.2rem); /* Increased size for mobile */
         margin-bottom: 5px;
         line-height: 1.05;
     }
     
     .sub-headline {
         margin: 0 auto 12px;
-        font-size: 0.9rem;
-        line-height: 1.25;
+        font-size: 0.95rem; /* Slightly larger */
+        line-height: 1.35;
+        text-align: center; /* Centered as requested */
     }
     
     .cta-button {
