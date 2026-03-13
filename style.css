@@ -1,0 +1,507 @@
+:root {
+    /* Brand Colors */
+    --primary-orange: #FF5722;
+    --primary-orange-hover: #E64A19;
+    --bg-dark: #0A0A0A;
+    --text-white: #FFFFFF;
+    --text-gray: #B0B0B0;
+    
+    /* Fonts */
+    --font-heading: 'Bebas Neue', cursive;
+    --font-body: 'Open Sans', sans-serif;
+    
+    /* Layout */
+    --container-max-width: 1200px;
+    --section-padding: 80px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.header.scrolled {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.22rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-accent {
+    color: var(--primary-orange);
+}
+
+.header-logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-stars {
+    color: #FFC107; /* Vibrant Gold/Yellow */
+    font-size: 0.9rem; /* Slightly smaller for better fit */
+    margin-top: -5px; /* Brought closer to the logo */
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+.logo sup {
+    font-size: 0.6rem;
+    top: -0.8em;
+    margin-left: 2px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--primary-orange);
+}
+
+.cta-mini {
+    background: var(--text-white);
+    color: var(--bg-dark) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.cta-mini:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-dark);
+    background-image: url('assets/hero-bg-v2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Subtle overlay to improve contrast without hiding the image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.7) 0%, 
+        rgba(0, 0, 0, 0.3) 50%, 
+        rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    display: block; /* Changed from inline-block to take full width and ensure clean start */
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Removed the ::before line that was pushing the text to the right */
+
+.headline {
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 8vw, 6rem); /* Increased for Bebas Neue */
+    font-weight: 400; /* Bebas Neue Bold is usually 400 in Google Fonts */
+    line-height: 0.95;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+}
+
+.text-orange {
+    color: var(--primary-orange);
+}
+
+.sub-headline {
+    font-size: 1.15rem;
+    color: #f0f0f0; /* Brighter for better readability */
+    margin-bottom: 40px;
+    max-width: 500px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    text-align: justify;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 420px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.testimonial-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-orange);
+    object-fit: cover;
+}
+
+.testimonial-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-white);
+    letter-spacing: 0.5px;
+}
+
+.testimonial-location {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.testimonial-body {
+    margin-bottom: 10px;
+}
+
+.testimonial-body p {
+    font-style: italic;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: #ddd;
+    position: relative;
+    padding-left: 12px;
+}
+
+.testimonial-body p::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -5px;
+    font-size: 2rem;
+    color: var(--primary-orange);
+    opacity: 0.5;
+    font-family: serif;
+}
+
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.verified-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--text-white);
+    letter-spacing: 0.5px;
+}
+
+.testimonial-stars {
+    color: #FFC107;
+    font-size: 0.8rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-orange);
+    color: var(--text-white);
+    padding: 20px 45px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 87, 34, 0.3);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* Take full available width */
+    max-width: 420px; /* Match the testimonial card exactly */
+}
+
+.cta-button:hover {
+    background-color: var(--primary-orange-hover);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 87, 34, 0.4);
+}
+
+/* Footer */
+.footer {
+    background-color: #050505;
+    padding:60px 0 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #888;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px !important; /* Narrower for better readability of text blocks */
+}
+
+.disclaimer p {
+    font-weight: 500;
+    color: #aaa;
+    text-align: center;
+}
+
+.retailer-info p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.support-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.support-links a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.support-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Animations */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-up-delayed {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.reveal-up-delayed.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .hero {
+        background-image: url('assets/hero-bg-mobile.png');
+        background-position: center bottom;
+        background-size: cover;
+        text-align: center;
+        display: flex; /* Ensure flex is active */
+        flex-direction: column; /* Stack top to bottom */
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        height: 100vh;
+        padding-top: 115px; /* Fine-tuned to balance space */
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.92) 0%, 
+            rgba(0,0,0,0.6) 35%, 
+            rgba(0,0,0,0) 75%);
+        z-index: 1;
+    }
+    
+    .hero-content {
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
+        width: 92%;
+    }
+
+    .hero-actions {
+        gap: 15px; /* Tighter gap between card and button */
+        margin-top: 10px;
+    }
+    
+    .eyebrow {
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+    }
+    
+    .headline {
+        font-size: clamp(1.9rem, 8.5vw, 2.6rem); /* Optimized size */
+        margin-bottom: 5px;
+        line-height: 1.05;
+    }
+    
+    .sub-headline {
+        margin: 0 auto 12px;
+        font-size: 0.9rem;
+        line-height: 1.25;
+    }
+    
+    .cta-button {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 1.05rem;
+    }
+
+    .testimonial-card {
+        max-width: 100%;
+        padding: 12px;
+        margin-top: 0;
+    }
+
+    .testimonial-body p {
+        font-size: 0.82rem;
+        line-height: 1.35;
+    }
+    
+    .testimonial-header {
+        margin-bottom: 8px;
+        gap: 10px;
+    }
+
+    .testimonial-photo {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Footer Seals Optimization */
+    .footer-seals {
+        margin-bottom: 10px;
+    }
+
+    .footer-seals .seals-row {
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-seals .seal-img {
+        height: 65px; /* Bigger seals as requested for mobile footer */
+        opacity: 1;
+    }
+}
