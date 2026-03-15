@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    {
+      "source": "/Endopeak/(.*)",
+      "destination": "/Endopeak/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/Endopeak/$1"
+    }
+  ],
+  "cleanUrls": true
+}
