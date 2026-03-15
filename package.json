@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "browser-sync start --server --startPath Endopeak --files 'Endopeak/*.html, Endopeak/*.css, Endopeak/*.js'",
+    "dev": "browser-sync start --server --startPath EndoPeak --files 'EndoPeak/*.html, EndoPeak/*.css, EndoPeak/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
