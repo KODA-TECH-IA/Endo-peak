@@ -5,90 +5,396 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/Endopeak/">
-    <title>Endopeak | Peak Performance Supplement</title>
+    <title>EndoPeak | Premium Male Support Formula</title>
     <meta name="description"
-        content="Unlock your true potential with Endopeak. The premium supplement designed for peak performance and vitality.">
+        content="Support your natural vitality with EndoPeak. The advanced formula carefully designed for daily use.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;700&display=swap"
         rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 
 <body>
-    <!-- Transparent Header -->
-    <header class="header" id="header">
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <p>⚠️ LIMITED TIME OFFER: Get Up To 65% Off While Supplies Last!</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <div class="header-logo-group">
-                <div class="logo">
-                    <span class="logo-accent">ENDO</span>PEAK<sup>®</sup>
+            <div class="header-left">
+                <button id="mobile-menu-btn" class="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="header-logo-group">
+                    <div class="logo">
+                        <span class="logo-accent">ENDO</span>PEAK<sup>®</sup>
+                    </div>
+                    <div class="logo-stars">
+                        ★★★★★
+                    </div>
                 </div>
-                <div class="logo-stars">
-                    ★★★★★
-                </div>
+            </div>
+
+            <nav id="header-nav" class="header-nav">
+                <a href="#pricing">Pricing</a>
+                <a href="#guarantee">60 Days Guarantee</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="btn-outline">Order Now</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <!-- Section 1: Hero -->
+    <section class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="reveal-up">
-                    <h1 class="headline">Peak Energy. <br><span class="text-orange">Real Stamina.</span></h1>
-                    <p class="sub-headline">Natural formula with plant-based ingredients.</p>
+                <div class="urgency-badge">🔥 High Demand - Limited Stock Available</div>
+                <h1 class="headline">Get Up To <span class="highlight">65% Off</span> Today – Limited Time Only</h1>
+                <p class="subheadline">Support Your Natural Vitality With This Advanced Formula</p>
+                
+                <ul class="hero-benefits">
+                    <li>✓ Formulated with natural ingredients</li>
+                    <li>✓ Easy to use daily</li>
+                    <li>✓ Manufactured in the USA</li>
+                </ul>
+
+                <div class="pricing-anchor">
+                    <p>From Just <strong>$49</strong> Per Bottle</p>
                 </div>
-
-                <div class="hero-actions reveal-up-delayed">
-                    <!-- Desktop Testimonial (Hidden on Mobile) -->
-                    <div class="testimonial-card testimonial-desktop">
-                        <div class="testimonial-header">
-                            <img src="assets/testimonial-mark.jpg" alt="Mark B." class="testimonial-photo">
-                            <div class="testimonial-user-info">
-                                <span class="testimonial-name">MARK B.</span>
-                                <span class="testimonial-location">NEW YORK, USA</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <p>"Before EndoPeak, I thought my top performance days were gone. As a retired officer, staying fit was crucial. But age caught up and ED struck. Thankfully, I found EndoPeak in the nick of time. Now, I feel like I'm back in my prime!"</p>
-                        </div>
-                        <div class="testimonial-footer">
-                            <span class="verified-label">VERIFIED PURCHASE</span>
-                            <div class="testimonial-stars">★★★★★</div>
-                        </div>
-                    </div>
-
-                    <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" target="_blank" class="cta-button">Go To Official Website</a>
+                
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn primary-btn pulse-anim">
+                    GET DISCOUNT NOW
+                    <span class="btn-sub">Click here to claim your savings</span>
+                </a>
+                <div class="trust-icons-text">
+                    🔒 Secure Checkout • Limited Stock • 60-Day Guarantee
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="assets/product.png" alt="EndoPeak Supplement Bottle" class="hero-product-img" onerror="this.style.display='none'; document.getElementById('img-fallback').style.display='flex';">
+                
+                <div id="img-fallback" class="product-placeholder" style="display: none; text-align: center; padding: 20px; flex-direction: column;">
+                    <span style="font-size: 1.2rem; color: #ff4d00; margin-bottom: 10px;">⚠️ IMAGEM AUSENTE</span>
+                    <span style="font-size: 0.9rem; text-transform: none; font-family: var(--font-body); color: var(--text-main);">Por favor, salve a imagem enviada no chat na pasta <strong>Endopeak/assets/</strong> com o nome exato de <strong>product.png</strong></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Section (Mobile Only - Controlled in CSS) -->
-    <section class="social-proof testimonial-mobile">
+    <!-- Section 2: Pricing -->
+    <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <img src="assets/testimonial-mark.jpg" alt="Mark B." class="testimonial-photo">
-                    <div class="testimonial-user-info">
-                        <span class="testimonial-name">MARK B.</span>
-                        <span class="testimonial-location">NEW YORK, USA</span>
+            <h2 class="section-title">Claim Your Discounted EndoPeak Below</h2>
+            <p class="section-subtitle">Select your package while supplies last.</p>
+            
+            <div class="pricing-grid">
+                <!-- Card 1: 1 Bottle -->
+                <div class="pricing-card basic">
+                    <div class="card-header">
+                        <h3>1 BOTTLE</h3>
+                        <p>30 Day Supply</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price-symbol">$</span>
+                        <span class="price-amount">69</span>
+                        <span class="price-per">/bottle</span>
+                    </div>
+                    <div class="card-total">
+                        <span class="retail-price">$179</span>
+                        Total: $69
+                    </div>
+                    <div class="card-shipping">+ SHIPPING</div>
+                    <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn secondary-btn">ADD TO CART</a>
+                    <div class="card-features">
+                        <p>✓ 60-Day Guarantee</p>
                     </div>
                 </div>
-                <div class="testimonial-body">
-                    <p>"Before EndoPeak, I thought my top performance days were gone. As a retired officer, staying fit was crucial. But age caught up and ED struck. Thankfully, I found EndoPeak in the nick of time. Now, I feel like I'm back in my prime!"</p>
+
+                <!-- Card 2: 6 Bottles (Best Value) -->
+                <div class="pricing-card best-value">
+                    <div class="best-value-badge">BEST VALUE</div>
+                    <div class="card-header">
+                        <h3>6 BOTTLES</h3>
+                        <p>180 Day Supply</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price-symbol">$</span>
+                        <span class="price-amount">49</span>
+                        <span class="price-per">/bottle</span>
+                    </div>
+                    <div class="card-total">
+                        <span class="retail-price">$1074</span>
+                        Total: $294
+                    </div>
+                    <div class="card-shipping free">FREE US SHIPPING</div>
+                    <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn primary-btn pulse-anim">ADD TO CART</a>
+                    <div class="card-features">
+                        <p class="highlight-text">✓ 2 FREE E-BOOKS</p>
+                        <p>✓ 60-Day Guarantee</p>
+                    </div>
                 </div>
-                <div class="testimonial-footer">
-                    <span class="verified-label">VERIFIED PURCHASE</span>
-                    <div class="testimonial-stars">★★★★★</div>
+
+                <!-- Card 3: 3 Bottles -->
+                <div class="pricing-card popular">
+                    <div class="card-header">
+                        <h3>3 BOTTLES</h3>
+                        <p>90 Day Supply</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price-symbol">$</span>
+                        <span class="price-amount">59</span>
+                        <span class="price-per">/bottle</span>
+                    </div>
+                    <div class="card-total">
+                        <span class="retail-price">$537</span>
+                        Total: $177
+                    </div>
+                    <div class="card-shipping free">FREE US SHIPPING</div>
+                    <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn secondary-btn">ADD TO CART</a>
+                    <div class="card-features">
+                        <p class="highlight-text">✓ 2 FREE E-BOOKS</p>
+                        <p>✓ 60-Day Guarantee</p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="secure-payment-icons">
+                <p>🔒 256-Bit SSL Secure Checkout</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Why it Works -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">What Makes EndoPeak So Effective?</h2>
+            <div class="divider"></div>
+            <p class="section-desc">The EndoPeak formula combines carefully selected natural compounds traditionally used to support male wellness. This powerful blend is designed to complement your routine effortlessly.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon">⚡</div>
+                    <h4>Supports Natural Vitality</h4>
+                    <p>Designed to help you feel your best and support daily stamina.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🔋</div>
+                    <h4>Maintains Energy Levels</h4>
+                    <p>Helps you avoid the midday crash and stay active.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🌿</div>
+                    <h4>Natural Ingredients</h4>
+                    <p>Premium plant-based elements carefully chosen for quality.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">📅</div>
+                    <h4>Daily Use Design</h4>
+                    <p>Easy to incorporate into your morning routine for consistency.</p>
+                </div>
+            </div>
+
+            <div class="benefits-seals" style="margin: 50px auto 30px;">
+                <div class="seals-row">
+                    <img src="assets/seal-usa.png" alt="Made in USA" class="seal-img">
+                    <img src="assets/seal-fda.png" alt="FDA Inspected Facility" class="seal-img">
+                    <img src="assets/seal-cgmp.png" alt="cGMP Practice" class="seal-img">
+                    <img src="assets/seal-gluten-free.png" alt="Gluten Free" class="seal-img">
+                    <img src="assets/seal-bpa-free.png" alt="BPA Free" class="seal-img">
+                    <img src="assets/seal-nongmo.png" alt="Non GMO" class="seal-img">
+                </div>
+            </div>
+
+            <div class="center-btn-wrap">
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn primary-btn hover-grow">Check Availability Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Warning Fake -->
+    <section class="warning-section">
+        <div class="container">
+            <div class="warning-box">
+                <div class="warning-icon">⚠️</div>
+                <div class="warning-content">
+                    <h3>Important: Avoid Fake Products</h3>
+                    <p>Due to high demand, counterfeit versions of EndoPeak are being sold on third-party websites. To ensure you receive the authentic product with premium quality ingredients, <strong>only purchase from the official website</strong>.</p>
+                    <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn warning-btn">Visit Official Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: How To Use -->
+    <section class="how-to-use">
+        <div class="container use-container">
+            <div class="use-content">
+                <h2 class="section-title left-align">How To Use EndoPeak</h2>
+                <div class="divider left"></div>
+                <ul class="steps-list">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div class="step-text">
+                            <strong>Take daily as directed</strong><br>
+                            Simply take EndoPeak with a glass of water after the first meal of the day.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div class="step-text">
+                            <strong>Emphasize consistency</strong><br>
+                            For best results, make EndoPeak a consistent part of your daily routine. Natural ingredients build up over time.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div class="step-text">
+                            <strong>Enjoy your day</strong><br>
+                            Experience the formula working with your body naturally.
+                        </div>
+                    </li>
+                </ul>
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn primary-btn hover-grow">Start Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Shipping -->
+    <section class="shipping-section">
+         <div class="container text-center">
+             <h2 class="section-title">Fast & Secure Shipping</h2>
+             <div class="divider"></div>
+             
+             <div class="shipping-grid">
+                 <div class="shipping-item">
+                     <span class="shipping-icon">🇺🇸</span>
+                     <h4>Ships from USA</h4>
+                     <p>Our orders are packaged in the USA and dispatched rapidly.</p>
+                 </div>
+                 <div class="shipping-item">
+                     <span class="shipping-icon">⏱️</span>
+                     <h4>Fast Processing</h4>
+                     <p>We process your orders quickly to ensure fast delivery times.</p>
+                 </div>
+                 <div class="shipping-item">
+                     <span class="shipping-icon">📦</span>
+                     <h4>Discreet Packaging</h4>
+                     <p>Your privacy matters. All orders are shipped in unmarked boxes.</p>
+                 </div>
+             </div>
+
+             <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn primary-btn pulse-anim">Order Now</a>
+         </div>
+    </section>
+
+    <!-- Section 7: Guarantee -->
+    <section id="guarantee" class="guarantee-section">
+        <div class="container guarantee-container">
+            <div class="guarantee-seal">
+                <div class="seal-badge">60 DAY<br><span>GUARANTEE</span></div>
+            </div>
+            <div class="guarantee-text">
+                <h2>100% Money Back Guarantee</h2>
+                <p>We are confident in EndoPeak, which is why we offer a 60-day, risk-free purchase. Try with confidence—if you are not totally satisfied with your results, simply send back what you haven't used for a full refund. Your satisfaction is our priority.</p>
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn warning-btn">Try It Risk-Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Reviews -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Real Customer Reviews</h2>
+            <div class="divider"></div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Before EndoPeak, I thought my top performance days were gone. As a retired officer, staying fit was crucial. But age caught up and ED struck. Thankfully, I found EndoPeak in the nick of time. Now, I feel like I'm back in my prime! My partner and I enjoy a satisfying love life, just like in our younger years."</p>
+                    <div class="reviewer">
+                        <strong>Mark B.</strong> <span>Verified Purchase • New York, USA</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"I work a demanding job in the financial sector, which means it can take me a while to unwind before I’m able to perform in the sack. But with EndoPeak that time is down to basically zero. Since I started taking one capsule every day with my morning coffee, I’ve never had a problem achieving full-fledged erections in seconds. I can now keep up with my young wife in the bedroom. Needless to say, this has made both of us VERY happy."</p>
+                    <div class="reviewer">
+                        <strong>Thomas J.</strong> <span>Verified Purchase • Arizona, USA</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"I was always self-conscious about performance in bed. Fear held me back. Then I found EndoPeak. It transformed EVERYTHING. Improved stamina, reliable erections, otherworldly confidence - you name it. EndoPeak changed my love life forever!"</p>
+                    <div class="reviewer">
+                        <strong>CHAD B.</strong> <span>Verified Purchase • Texas, USA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-btn-wrap">
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn primary-btn hover-grow">Get Your Discount Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="divider"></div>
+            
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>Is EndoPeak right for Me? <span class="toggle-icon">+</span></summary>
+                    <p>EndoPeak has provided amazing sex life support for men in their 30s, 40s, 50s and even 70s. Because it was engineered based on the teachings of modern science, EndoPeak formula is gentle yet powerful at the same time, using only pure plant ingredients and natural minerals. And you can rest assured knowing it's manufactured in the United States in a state-of-the-art FDA registered and GMP certified facility.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What kind of results can I expect from EndoPeak? <span class="toggle-icon">+</span></summary>
+                    <p>Results with EndoPeak typically come in stages, depending on how long your course of treatment is. Usually, they take place something like this:<br>Stage 1. You'll feel much better overall, with increased energy, clearer thoughts and restful sleep - think back a decade or two ago - that's how you’ll feel again.<br>Stage 2. You'll start getting firmer muscles and erections, more energy and stamina.<br>Stage 3. All your improvements solidify as long as you take EndoPeak for at least three months continuously. This happens when the inflammation that has plagued your reproductive system is completely eliminated, allowing you to experience fulfilling sex regardless of your age.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How long will it take to see results? <span class="toggle-icon">+</span></summary>
+                    <p>We're all different and that's why the time it takes to see results varies. Most people start feeling a difference after the first week. In our tests, the best results come when you take EndoPeak consistently for 3 months (or longer) to allow time to cleanse, restore and renew. Therefore, we strongly recommend you take advantage of our 3 or 6 bottle discount package.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is the best way to take EndoPeak? <span class="toggle-icon">+</span></summary>
+                    <p>Simply take EndoPeak with a glass of water after the first meal of the day.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What if EndoPeak doesn’t work for me? <span class="toggle-icon">+</span></summary>
+                    <p>I demand you are enthusiastic with your purchase, not just satisfied. And you won't know until you try it! So you can use EndoPeak for 60 days, with my "No Questions Asked 100% Money Back Guarantee". The only way to be totally convinced is to try this amazing formula and experience the results for yourself.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Where can I buy EndoPeak and how quickly can I get it? <span class="toggle-icon">+</span></summary>
+                    <p>To make sure you are buying the original product and to ensure the purity of ingredients please buy from the official website only. We'll ship your order directly to your home or office using a premium carrier such as FedEx or UPS. We strive to ship every order within 24 working hours and to make things easy you will receive an email with your tracking number so that you can follow your package. On average, the package will arrive at your doorstep somewhere between 5 to 10 days for domestic orders.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my purchase secure? How many times will you charge my card? <span class="toggle-icon">+</span></summary>
+                    <p>To purchase EndoPeak you are only asked for a one time payment right on this page. There are no other future payments needed to benefit from this product. This website is highly secure. We use industry-leading technology (such as SSLs) to keep your information safe and private.</p>
+                </details>
+            </div>
+
+            <div class="center-btn-wrap" style="margin-top: 40px;">
+                <a href="https://endopeak24.com/d/order-now.php#aff=kodatech" class="cta-btn secondary-btn">Order From Official Website</a>
             </div>
         </div>
     </section>
@@ -98,7 +404,8 @@
         <div class="container footer-container">
             <div class="footer-seals">
                 <div class="seals-row">
-                    <img src="assets/seal-usa.png" alt="Manufactured in USA" class="seal-img">
+                    <!-- Standard seals used in US supplements -->
+                    <img src="assets/seal-usa.png" alt="Made in USA" class="seal-img">
                     <img src="assets/seal-fda.png" alt="FDA Inspected Facility" class="seal-img">
                     <img src="assets/seal-cgmp.png" alt="cGMP Practice" class="seal-img">
                     <img src="assets/seal-gluten-free.png" alt="Gluten Free" class="seal-img">
@@ -106,20 +413,18 @@
                     <img src="assets/seal-nongmo.png" alt="Non GMO" class="seal-img">
                 </div>
             </div>
+
             <div class="disclaimer">
-                <p> These statements have not been evaluated by the Food and Drug Administration. This product is not
-                    intended
-                    to diagnose, treat, cure or prevent any disease. The information provided is not intended to be, nor
-                    is, medical advice or a substitute for medical advice. If you have or suspect you have, a specific
-                    medical condition or disease, please consult your healthcare provider.</p>
+                <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. The information provided is not intended to be, nor is, medical advice or a substitute for medical advice. If you have or suspect you have, a specific medical condition or disease, please consult your healthcare provider.</p>
             </div>
+            
             <div class="copyright">
-                <p>© EndoPeak Research 2022 All Rights Reserved.</p>
+                <p>© EndoPeak Research 2026 All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JS -->
+    <!-- JS (Mainly for smooth scroll and simple interactions if any) -->
     <script src="main.js"></script>
 </body>
 
