@@ -966,10 +966,95 @@ h1, h2, h3, h4 {
     font-weight: 500;
 }
 
+/* References Section */
+.references-section {
+    padding: var(--section-pad);
+    background-color: var(--bg-sec);
+    border-top: 1px solid var(--bg-trim);
+}
+
+.ref-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ref-category {
+    background: var(--bg-base);
+    padding: 25px 20px;
+    border-radius: var(--border-radius-card);
+    border: 1px solid var(--bg-trim);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.ref-category h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--bg-trim);
+    padding-bottom: 10px;
+}
+
+.ref-icon {
+    font-size: 1.3rem;
+}
+
+.ref-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ref-list li {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.ref-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.ref-list li:last-child {
+    margin-bottom: 0;
+}
+
+.ref-disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 30px auto 0;
+    font-style: italic;
+}
+
 /* FAQ Section */
 .faq-section {
     padding: var(--section-pad);
-    background-color: var(--bg-sec);
+    background-color: var(--bg-base);
     border-top: 1px solid var(--bg-trim);
 }
 
@@ -1201,7 +1286,7 @@ h1, h2, h3, h4 {
     .card-header h3 { font-size: 1.8rem; }
     
     /* Grids & Cards */
-    .benefits-grid, .shipping-grid, .reviews-grid { 
+    .benefits-grid, .shipping-grid, .reviews-grid, .references-grid { 
         grid-template-columns: 1fr; 
         gap: 15px; 
     }
